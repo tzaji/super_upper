@@ -1,5 +1,5 @@
 
-# SUPER UPPER project !
+# SUPER-UPPER (SU) project !
 
 We wish to know when to place our next order. When to order beer for the long nights watching ONE , Mondial and Super Bowl. 
 This code created a bot that runs all over the supermarket items and gets the most recent updates regarding products’ prices and new arrivals.
@@ -33,7 +33,7 @@ This is an ongoing project in its early stage.
 Join us to make it even better ...
 
 ### Database
-We maintain an updodate database of products available in your local supermarket to help you buy smart !
+to help you buy smart, we maintain an updodate database of available products in your local supermarket.
 
 ### About Data collection methodology
 Using data scrapping, opur code is trained to search your local supermarket's web for updates, giving you unlimited access to the most uptpdate information. 
@@ -64,16 +64,17 @@ pip install <<TBA>>
 import <<TBA>>
 
 # create database
-<<TBA>>
+su.create()
 
-# Determine how many products per category you would like to include your search result (-1 will return all products).
-<<TBA>>
+# return the number of products you choose to include from each section. 
+(Note that -1 returns all products in the database).
+su.products()
 
-# Search products by name. this method will return all products of which names include the name you search for.
-<<TBA>>
+# return products of which names include the pattern in your search.
+su.pattern()
 
-# Choose section of which products you would like to review.
-<<TBA>>
+# return products of a chosen section.
+su.section()
 ```
 
 ## Contributing
