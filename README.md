@@ -1,4 +1,4 @@
-#SUPER UPPER project !
+# SUPER UPPER project !
 
 We wish to know when to place our next order. When to order beer for the long nights watching ONE , Mondial and Super Bowl. 
 This code created a bot that runs all over the supermarket items and gets the most recent updates regarding products’ prices and new arrivals.
