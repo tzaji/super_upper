@@ -66,13 +66,13 @@ import <<TBA>>
 # create database
 <<TBA>>
 
-# returns limit of item per group to scrap (For unlimited: -1).
+# Determine how many products per category you would like to include your search result (-1 will return all products).
 <<TBA>>
 
-# returns Look for some product by with regex text scrap
+# Search products by name. this method will return all products of which names include the name you search for.
 <<TBA>>
 
-# returns Look for some group by with regex text scrap
+# Choose section of which products you would like to review.
 <<TBA>>
 ```
 
