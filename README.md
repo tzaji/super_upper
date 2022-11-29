@@ -1,3 +1,4 @@
+
 # SUPER UPPER project !
 
 We wish to know when to place our next order. When to order beer for the long nights watching ONE , Mondial and Super Bowl. 
@@ -24,5 +25,37 @@ you can check the scrapping phase and watch the dictionary being built gradually
 
 Stay tuned for more features . . .
 
+
+## Installation
+
+
+```bash
+pip install ________
+```
+
+## Usage
+
+```python
+import _____
+
+# returns 'words'
+_______________
+
+# returns 'geese'
+_______________
+# returns 'phenomenon'
+_______________
+```
+
+## Contributing
+
+Pull requests are welcome. Please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
 GT team
 Making the world a better place   😊 
+
