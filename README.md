@@ -12,10 +12,6 @@ Making sure no item is left behind, we used scroll-down commands inside a loop, 
 Associating the collected information with its section, we then wrap and append it to a temporary dictionary. 
 This dictionary is appended to a main dictionary and the loop goes forward to the next section and so on. 
 
-Upper Gearbox: 
-1 - 5 speed rates. Regulate the scrolling and the waiting time. Slower for better performance and faster for faster performance. 
-The later is recommended if you feel drained and do not mind to miss some items on the run.
-
 Upper Smart Test: 
 you can choose how many items per section you want to scrap. Note that "-1" option will scrap the whole website!! 
 
@@ -30,21 +26,25 @@ Stay tuned for more features . . .
 
 
 ```bash
-pip install ________
+pip install <<TBA>>
 ```
 
 ## Usage
 
 ```python
-import _____
+import <<TBA>>
 
-# returns 'words'
-_______________
+# create database
+<<TBA>>
 
-# returns 'geese'
-_______________
-# returns 'phenomenon'
-_______________
+# returns limit of item per group to scrap (For unlimited: -1).
+<<TBA>>
+
+# returns Look for some product by with regex text scrap
+<<TBA>>
+
+# returns Look for some group by with regex text scrap
+<<TBA>>
 ```
 
 ## Contributing
