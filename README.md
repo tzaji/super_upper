@@ -39,7 +39,7 @@ This description gives a detailed process on how the data was collected. It shou
 
 ### Description of the data
 
-Here you can descibe how the data is organized in this whole dataset. How the data is stored in all the files. You also have to brief about the naming convention of the files in different directories. 
+Here you can descibe how the data is organized in this whole dataset. How the data is stored in all the files. You also have to brief about the naming convention of the files in different directories.  
 
 ```
 ![image](https://user-images.githubusercontent.com/116640324/204576898-67ed15e2-53b6-4404-8ebe-98bb483f6da1.png)
