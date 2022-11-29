@@ -39,6 +39,7 @@ Using data scrapping, opur code is trained to search for updates online in your 
 ### Description of the data
 Maximizing queries combinations to satisfy your demandd we maintain six tables. 
 the following link is the ERD of where you can see the different keys and atributes and how they are connected to enable a fast output to your queries.
+
 https://user-images.githubusercontent.com/116640324/204578596-274365bf-fdac-49dd-af00-afc857c6f7ea.png .
 
 ### Online Repository link
