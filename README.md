@@ -21,10 +21,17 @@ you can check the scrapping phase and watch the dictionary being built gradually
 
 Stay tuned for more features . . .
 
-## Database
-# About Dataset
 
-One Paragraph about data description goes here. You can also state why this data was collected.
+GT team
+Making the world a better place   😊 
+
+
+## Project Status
+This is an ongoing project in its early stage.
+Join us to make it even better ...
+
+## Database
+We maintain an updodate database of products available in your local supermarket to help you buy smart !
 
 ## About Data collection methodology
 
@@ -35,19 +42,7 @@ This description gives a detailed process on how the data was collected. It shou
 Here you can descibe how the data is organized in this whole dataset. How the data is stored in all the files. You also have to brief about the naming convention of the files in different directories. 
 
 ```
-Give examples
-Root Dir/
-  -Sub Dir/
-    -DataFile1
-    -DataFile2
-    -...
-  -Sub Dir/
-    -Dir/
-      -DataFile1
-      -DataFile2
-      -...
-  -README.md
-
+![image](https://user-images.githubusercontent.com/116640324/204576898-67ed15e2-53b6-4404-8ebe-98bb483f6da1.png)
 ```
 
 ### And file formats
