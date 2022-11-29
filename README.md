@@ -30,51 +30,23 @@ Making the world a better place   😊
 This is an ongoing project in its early stage.
 Join us to make it even better ...
 
-## Database
+### Database
 We maintain an updodate database of products available in your local supermarket to help you buy smart !
 
-## About Data collection methodology
-
-This description gives a detailed process on how the data was collected. It should describe the conditions under which the data was recorded and also the devices used to record the data.
+### About Data collection methodology
+Using data scrapping, opur code is trained to search for updates online in your local supermarket web giving you unlimited access to the most uptpdate information. 
 
 ### Description of the data
+Maximizing queries combinations to satisfy your demandd we maintain six tables. 
+the following link is the ERD of where you can see the different keys and atributes and how they are connected to enable a fast output to your queries.
+https://user-images.githubusercontent.com/116640324/204578596-274365bf-fdac-49dd-af00-afc857c6f7ea.png .
 
-Here you can descibe how the data is organized in this whole dataset. How the data is stored in all the files. You also have to brief about the naming convention of the files in different directories.  
+### Online Repository link
+As our budget will grow,  we soon will have our entire database available for you online. 
 
-https://user-images.githubusercontent.com/116640324/204578596-274365bf-fdac-49dd-af00-afc857c6f7ea.png
-
-```
-![image](https://user-images.githubusercontent.com/116640324/204576898-67ed15e2-53b6-4404-8ebe-98bb483f6da1.png)
-```
-
-### And file formats
-
-If the data includes images or audio, you can mention the file format eg.(.svg, .png, .mpeg).
-```
--500 images, format svg.
-```
-
-## Online Repository link
-
-* [DataRepository](https://www.kaggle.com/datasets) - Link to the data repository.
-
-## Authors
-
-* **authorname** - *Initial work* - [shashvatshah9](https://github.com/shashvatshah9)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-
+### Acknowledgments
+Special thanks to supermarkets web developers who did not make it easy for us to take the data out of their web letting us sharp our coding skills to make it possible.
+We deeply appreciate your sincere attempt. But well ... we got it. 
 
 ## Installation
 
