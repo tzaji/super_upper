@@ -36,7 +36,7 @@ Join us to make it even better ...
 We maintain an updodate database of products available in your local supermarket to help you buy smart !
 
 ### About Data collection methodology
-Using data scrapping, opur code is trained to search for updates online in your local supermarket web giving you unlimited access to the most uptpdate information. 
+Using data scrapping, opur code is trained to search your local supermarket's web for updates, giving you unlimited access to the most uptpdate information. 
 
 ### Description of the data
 Maximizing queries combinations to satisfy your demandd we maintain six tables. 
