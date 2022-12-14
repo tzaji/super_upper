@@ -31,18 +31,22 @@ def execute_sql_commands(commands: list, type, hst=MYSQL_HOST, usr=MYSQL_USER, p
     """
     this function receives sql commands (i.e. strings) and executes them one by one.
     """
-    mydb = mysql.connector.connect(host=hst, user=usr, password=pswrd, database=DATABASE)
+    if type == "CREATE_DATABASE":
+        mydb = mysql.connector.connect(host=hst, user=usr, password=pswrd)
+    else:
+        mydb = mysql.connector.connect(host=hst, user=usr, password=pswrd, database=DATABASE)
     use_command = [f"USE {DATABASE};"]
     total_commands = len(commands)
     with mydb.cursor() as cursor:
-        cursor.execute(use_command[0])
+        if type == "SELECT" or type == "INSERT" or type == "CREATE_TABLE":
+            cursor.execute(use_command[0])
         for i in range(0, total_commands):
             try:
                 if type == "SELECT":
                     cursor.execute(commands[i])
                     result = cursor.fetchall()
                     return result
-                elif type == "INSERT":
+                else:
                     cursor.execute(commands[i])
                     mydb.commit()
                 logging.info(f"'{commands[i]}' (i.e. {i} out of {total_commands} commands) was successfully executed.")
@@ -73,9 +77,9 @@ def sql_commands_to_create_database(db_tables: list, db=DATABASE):
     """
     create_command = [f"CREATE DATABASE {db};"]
     use_command = [f"USE {db};"]
-    execute_sql_commands(create_command)
+    execute_sql_commands(create_command, "CREATE_DATABASE")
     for element in db_tables:
-        execute_sql_commands(use_command + [element])
+        execute_sql_commands(use_command + [element], type="CREATE_TABLE")
 
 
 def updating_db_tables(dict_list: list, db=DATABASE):

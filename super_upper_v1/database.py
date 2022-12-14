@@ -51,6 +51,15 @@ nutritional_facts_table = """
                           );
                           """
 
+
+tables_queries = [sections_table,
+                  products_table,
+                  price_records_table,
+                  nutritional_facts_table,
+                  nutritional_values_table
+                  ]
+
+
 foreign_keys_alter_nutritional_values_table = """
                                               ALTER TABLE nutritional_values 
                                               ADD FOREIGN KEY (nutritional_facts) REFERENCES nutritional_facts(id);
@@ -61,12 +70,7 @@ foreign_keys_alter_nutritional_facts_table = """
                                              ADD FOREIGN KEY (id) REFERENCES nutritional_values(nutritional_facts);
                                              """
 
-tables_queries = [sections_table,
-                  products_table,
-                  price_records_table,
-                  nutritional_facts_table,
-                  nutritional_values_table
-                  ]
+
 
 foreign_keys_queries = [foreign_keys_alter_nutritional_values_table,
                         foreign_keys_alter_nutritional_facts_table
