@@ -21,7 +21,7 @@ test_limit_item_per_group_ini = 10
 scrap_speed = 3
 
 
-def convert_tuples_to_dictionary(tuples):
+def convert_tuples_to_dictionary(tuples=()):
     dictionary = {}
     for first_item, second_item in tuples:
         dictionary[first_item] = second_item
@@ -482,7 +482,8 @@ def main():
 
     # SELECT list of tuples(item, id) of products
     product_tuples = database_functions.execute_sql_commands([database_config.select_products_items_query], type="SELECT")
-    product_dictionary = convert_tuples_to_dictionary(product_tuples)
+    if product_tuples:
+        product_dictionary = convert_tuples_to_dictionary(product_tuples)
 
 
     if test_limit_item_per_group_ini > 0:

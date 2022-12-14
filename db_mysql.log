@@ -708,3 +708,110 @@ INSERT INTO products ('item', 'barcode', 'name') VALUES (1, 756756745, 'milk')
 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15:49:35)' at line 1.
 2022-12-14 16:34:05,728:ERROR:50:Error: 'INSERT INTO price_records (product_id, price, record_time) VALUES (5, 2330, 2022-12-14 16:34:05);' (i.e. 1 out of 2 commands) was not executed due to the following:
 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '16:34:05)' at line 1.
+2022-12-14 21:14:24,135:ERROR:54:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-14 21:14:24,180:ERROR:54:Error: '
+                 CREATE TABLE products(
+                         id INT NOT NULL AUTO_INCREMENT,
+                         item INT,
+                         barcode INT,
+                         name VARCHAR(255),
+                         sub_section_id INT,
+                         PRIMARY KEY(id),
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 8.
+2022-12-14 21:14:24,197:ERROR:54:Error: '
+                      CREATE TABLE price_records(
+                      id INT NOT NULL AUTO_INCREMENT,
+                      product_id INT,
+                      price float,
+                      record_time int,
+                      PRIMARY KEY(id),
+                      FOREIGN KEY (product_id) REFERENCES products(id)
+                      );
+                      ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-14 21:14:24,236:ERROR:54:Error: '
+                           CREATE TABLE nutritional_values(
+                           id INT NOT NULL AUTO_INCREMENT,
+                           product_id INT,
+                           item INT,
+                           barcode int,
+                           name VARCHAR(255),
+                           nutritional_facts INT,
+                           PRIMARY KEY(id),
+                           FOREIGN KEY (product_id) REFERENCES products(id)
+                           );
+                           ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-14 21:14:24,251:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:16:47,968:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:17:01,986:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:17:24,756:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:23:57,608:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:27:27,959:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:28:01,798:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:28:19,607:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:28:32,533:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:28:52,783:ERROR:54:Error: '
+SELECT item, id
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.products' doesn't exist.
+2022-12-14 21:31:39,141:ERROR:54:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-14 21:31:39,156:ERROR:54:Error: '
+                 CREATE TABLE sections(
+                         id INT NOT NULL AUTO_INCREMENT, 
+                         name VARCHAR(255), 
+                         url VARCHAR(255), 
+                         PRIMARY KEY(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sections' already exists.
+2022-12-14 21:31:39,247:ERROR:54:Error: '
+                          CREATE TABLE nutritional_facts(
+                          id INT NOT NULL AUTO_INCREMENT,
+                          nutritional_facts_en VARCHAR(255),
+                          nutritional_facts_he VARCHAR(255),
+                          PRIMARY KEY(id)
+                          );
+                          ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_facts' already exists.

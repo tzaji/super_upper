@@ -14,7 +14,7 @@ products_table = """
                          barcode INT,
                          name VARCHAR(255),
                          sub_section_id INT,
-                         PRIMARY KEY(id),
+                         PRIMARY KEY(id)
                  );
                  """
        
