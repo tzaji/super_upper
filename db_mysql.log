@@ -1,0 +1,710 @@
+2022-12-13 15:54:45,350:ERROR:42:Error: 'CREATE TABLE products (id INT PRIMARY KEY AUTOINCREMENT, item INT, barcode INT, name VARCHAR, );' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AUTOINCREMENT, item INT, barcode INT, name VARCHAR, )' at line 1.
+2022-12-13 16:00:07,402:ERROR:42:Error: 'CREATE DATABASE db;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'db'; database exists.
+2022-12-13 16:00:07,412:ERROR:42:Error: 'CREATE TABLE products (id INT PRIMARY KEY AUTOINCREMENT, item INT, barcode INT, name VARCHAR, );' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AUTOINCREMENT, item INT, barcode INT, name VARCHAR, )' at line 1.
+2022-12-13 16:01:03,547:ERROR:42:Error: 'CREATE TABLE products (id INT PRIMARY KEY AUTOINCREMENT, item INT, barcode INT, name VARCHAR, );' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AUTOINCREMENT, item INT, barcode INT, name VARCHAR, )' at line 1.
+2022-12-13 16:14:42,321:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:14:42,326:ERROR:42:Error: 'CREATE TABLE products (id INT PRIMARY KEY AUTO_INCREMENT, item INT, barcode INT, name VARCHAR, );' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', )' at line 1.
+2022-12-13 16:17:35,399:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:17:35,402:ERROR:42:Error: 'CREATE TABLE products (id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR, PRIMARY KEY (id), );' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', PRIMARY KEY (id), )' at line 1.
+2022-12-13 16:24:58,695:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:24:58,698:ERROR:42:Error: '
+    'CREATE TABLE products(
+    id INT NOT NULL AUTO_INCREMENT,
+    item INT,
+    barcode INT,
+    name INT VARCHAR,
+    PRIMARY KEY(id));'
+' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''CREATE TABLE products(
+    id INT NOT NULL AUTO_INCREMENT,
+    item INT,
+    ba' at line 1.
+2022-12-13 16:25:30,103:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:25:30,106:ERROR:42:Error: '
+    'CREATE TABLE products(
+    id INT NOT NULL,
+    item INT,
+    barcode INT,
+    name INT VARCHAR,
+    PRIMARY KEY(id));'
+' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''CREATE TABLE products(
+    id INT NOT NULL,
+    item INT,
+    barcode INT,
+    ' at line 1.
+2022-12-13 16:25:56,831:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:25:56,835:ERROR:42:Error: '
+    'CREATE TABLE products(    id INT NOT NULL,    item INT,
+    barcode INT,
+    name INT VARCHAR,
+    PRIMARY KEY(id));'
+' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''CREATE TABLE products(    id INT NOT NULL,    item INT,
+    barcode INT,
+    na' at line 1.
+2022-12-13 16:26:22,983:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:26:22,986:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL, item INT, barcode INT, name INT VARCHAR, PRIMARY KEY(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VARCHAR, PRIMARY KEY(id))' at line 1.
+2022-12-13 16:26:42,178:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:26:42,180:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL, item INT, barcode INT, name INT VARCHAR(255), PRIMARY KEY(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VARCHAR(255), PRIMARY KEY(id))' at line 1.
+2022-12-13 16:28:55,869:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:29:52,480:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:29:52,484:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL, item INT, barcode INT, name INT VARCHAR(255), PRIMARY KEY(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VARCHAR(255), PRIMARY KEY(id))' at line 1.
+2022-12-13 16:31:00,013:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:31:00,044:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), PRIMARY KEY(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1050 (42S01): Table 'products' already exists.
+2022-12-13 16:31:44,938:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:36:10,712:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:36:10,715:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INTPRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INTPRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id))' at line 1.
+2022-12-13 16:36:29,973:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:36:29,976:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1050 (42S01): Table 'products' already exists.
+2022-12-13 16:37:04,521:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 16:37:04,528:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:04:39,317:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:04:39,321:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:04:39,339:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:04:39,363:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sections'.
+2022-12-13 17:04:39,381:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:04:39,388:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:04:39,398:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:04:39,404:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:04:39,413:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:04:39,415:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id)FOREIGN KEY (nutritional_facts) REFERENCES nutritional_facts(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOREIGN KEY (nutritional_facts) REFERENCES nutritional_facts(id))' at line 1.
+2022-12-13 17:04:39,425:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:04:39,445:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, nutritional_facts_en VARCHAR(255), nutritional_facts_he VARCHAR(255), PRIMARY KEY(id),FOREIGN KEY (id) REFERENCES nutritional_values(nutritional_facts));' (i.e. 2 out of 3 commands) was not executed due to the following:
+3734 (HY000): Failed to add the foreign key constraint. Missing column 'nutritional_facts' for constraint 'nutritional_values_ibfk_1' in the referenced table 'nutritional_values'.
+2022-12-13 17:06:37,184:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:06:37,187:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:06:37,192:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:06:37,196:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sections'.
+2022-12-13 17:06:37,202:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:06:37,206:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:06:37,213:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:06:37,217:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:06:37,223:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:06:37,226:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, nutritional_facts_en VARCHAR(255), nutritional_facts_he VARCHAR(255), PRIMARY KEY(id),FOREIGN KEY (id) REFERENCES nutritional_values(nutritional_facts));' (i.e. 2 out of 3 commands) was not executed due to the following:
+3734 (HY000): Failed to add the foreign key constraint. Missing column 'nutritional_facts' for constraint 'nutritional_values_ibfk_1' in the referenced table 'nutritional_values'.
+2022-12-13 17:06:37,233:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:06:37,234:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id)FOREIGN KEY (nutritional_facts) REFERENCES nutritional_facts(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOREIGN KEY (nutritional_facts) REFERENCES nutritional_facts(id))' at line 1.
+2022-12-13 17:18:39,241:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,246:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:18:39,264:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,280:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sections'.
+2022-12-13 17:18:39,297:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,442:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:18:39,532:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,590:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:18:39,618:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,686:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,696:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:18:39,706:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,712:ERROR:42:Error: 'ALTER TABLE nutritional_values ADD FOREIGN KEY (nutritional_facts) REFERENCES nutritional_facts(id);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1146 (42S02): Table 'rami_levy.nutritional_values' doesn't exist.
+2022-12-13 17:18:39,724:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:18:39,737:ERROR:42:Error: 'ALTER TABLE nutritional_facts ADD FOREIGN KEY (id) REFERENCES nutritional_values(nutritional_facts);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'nutritional_values'.
+2022-12-13 17:19:24,764:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:24,768:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:19:24,778:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:24,782:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sections'.
+2022-12-13 17:19:24,791:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:24,801:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:19:24,812:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:24,817:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:19:24,827:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:24,830:ERROR:42:Error: 'CREATE TABLE nutritional_facts(id INT NOT NULL AUTO_INCREMENT, nutritional_facts_en VARCHAR(255), nutritional_facts_he VARCHAR(255), PRIMARY KEY(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_facts' already exists.
+2022-12-13 17:19:24,839:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:24,844:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:19:43,681:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:43,684:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 2 out of 3 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:19:43,691:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:43,695:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sections'.
+2022-12-13 17:19:43,702:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:43,706:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:19:43,712:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:43,715:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:19:43,722:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:43,756:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 3 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:19:43,759:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 2 out of 3 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:20:27,470:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:20:27,479:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 0 out of 1 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:20:27,486:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:27,493:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:27,500:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:27,508:ERROR:42:Error: 'CREATE TABLE nutritional_facts(id INT NOT NULL AUTO_INCREMENT, nutritional_facts_en VARCHAR(255), nutritional_facts_he VARCHAR(255), PRIMARY KEY(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:27,515:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:40,554:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:20:40,564:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 0 out of 1 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:20:40,571:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:40,579:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:40,586:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:40,594:ERROR:42:Error: 'CREATE TABLE nutritional_facts(id INT NOT NULL AUTO_INCREMENT, nutritional_facts_en VARCHAR(255), nutritional_facts_he VARCHAR(255), PRIMARY KEY(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:20:40,601:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-13 17:24:03,131:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:24:03,142:ERROR:42:Error: 'CREATE TABLE sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), PRIMARY KEY(id),);' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1.
+2022-12-13 17:24:03,151:ERROR:42:Error: 'CREATE TABLE sub_sections(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), url VARCHAR(255), section_id INT, PRIMARY KEY(id),FOREIGN KEY (section_id) REFERENCES sections(id));' (i.e. 1 out of 2 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sections'.
+2022-12-13 17:24:03,158:ERROR:42:Error: 'CREATE TABLE products(id INT NOT NULL AUTO_INCREMENT, item INT, barcode INT, name VARCHAR(255), sub_section_id INT, PRIMARY KEY(id),FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id));' (i.e. 1 out of 2 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'sub_sections'.
+2022-12-13 17:24:03,166:ERROR:42:Error: 'CREATE TABLE price_records(id INT NOT NULL AUTO_INCREMENT, product_id INT, price float, record_time int, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 1 out of 2 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:24:03,198:ERROR:42:Error: 'CREATE TABLE nutritional_values(id INT NOT NULL AUTO_INCREMENT, product_id INT, item INT, barcode int, name VARCHAR(255), nutritional_facts INT, PRIMARY KEY(id),FOREIGN KEY (product_id) REFERENCES products(id));' (i.e. 1 out of 2 commands) was not executed due to the following:
+1824 (HY000): Failed to open the referenced table 'products'.
+2022-12-13 17:27:42,243:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:27:42,260:ERROR:42:Error: '
+                 'CREATE TABLE sections(
+                         'id INT NOT NULL AUTO_INCREMENT, 
+                         'name VARCHAR(255), 
+                         'url VARCHAR(255), 
+                         'PRIMARY KEY(id),
+                 );'
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''CREATE TABLE sections(
+                         'id INT NOT NULL AUTO_INCREMENT' at line 1.
+2022-12-13 17:28:05,331:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:28:05,339:ERROR:42:Error: '
+                 CREATE TABLE sections(
+                         'id INT NOT NULL AUTO_INCREMENT, 
+                         'name VARCHAR(255), 
+                         'url VARCHAR(255), 
+                         'PRIMARY KEY(id),
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''id INT NOT NULL AUTO_INCREMENT, 
+                         'name VARCHAR(255), 
+' at line 2.
+2022-12-13 17:28:46,612:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:28:46,620:ERROR:42:Error: '
+                 CREATE TABLE sections(
+                         id INT NOT NULL AUTO_INCREMENT, 
+                         name VARCHAR(255), 
+                         url VARCHAR(255), 
+                         PRIMARY KEY(id),
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 6.
+2022-12-13 17:29:08,063:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:30:08,548:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:30:08,562:ERROR:42:Error: '
+                 CREATE TABLE sections(
+                         id INT NOT NULL AUTO_INCREMENT, 
+                         name VARCHAR(255), 
+                         url VARCHAR(255), 
+                         PRIMARY KEY(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sections' already exists.
+2022-12-13 17:33:13,695:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 17:33:13,711:ERROR:42:Error: '
+                 CREATE TABLE sections(
+                         id INT NOT NULL AUTO_INCREMENT, 
+                         name VARCHAR(255), 
+                         url VARCHAR(255), 
+                         PRIMARY KEY(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sections' already exists.
+2022-12-13 17:33:13,728:ERROR:42:Error: '
+                     CREATE TABLE sub_sections(
+                     id INT NOT NULL AUTO_INCREMENT,
+                     name VARCHAR(255),
+                     url VARCHAR(255),
+                     section_id INT,
+                     PRIMARY KEY(id),
+                     FOREIGN KEY (section_id) REFERENCES sections(id)
+                     );
+                     ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sub_sections' already exists.
+2022-12-13 17:33:13,841:ERROR:42:Error: '
+                          CREATE TABLE nutritional_facts(
+                          id INT NOT NULL AUTO_INCREMENT,
+                          nutritional_facts_en VARCHAR(255),
+                          nutritional_facts_he VARCHAR(255),
+                          PRIMARY KEY(id)
+                          );
+                          ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_facts' already exists.
+2022-12-13 18:05:21,374:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-13 18:05:54,223:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-14 09:48:07,933:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-14 09:48:07,994:ERROR:42:Error: '
+                 CREATE TABLE sections(
+                         id INT NOT NULL AUTO_INCREMENT, 
+                         name VARCHAR(255), 
+                         url VARCHAR(255), 
+                         PRIMARY KEY(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sections' already exists.
+2022-12-14 09:48:08,027:ERROR:42:Error: '
+                     CREATE TABLE sub_sections(
+                     id INT NOT NULL AUTO_INCREMENT,
+                     name VARCHAR(255),
+                     url VARCHAR(255),
+                     section_id INT,
+                     PRIMARY KEY(id),
+                     FOREIGN KEY (section_id) REFERENCES sections(id)
+                     );
+                     ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sub_sections' already exists.
+2022-12-14 09:48:08,045:ERROR:42:Error: '
+                 CREATE TABLE products(
+                         id INT NOT NULL AUTO_INCREMENT,
+                         item INT,
+                         barcode INT,
+                         name VARCHAR(255),
+                         sub_section_id INT,
+                         PRIMARY KEY(id),
+                         FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'products' already exists.
+2022-12-14 09:48:08,066:ERROR:42:Error: '
+                      CREATE TABLE price_records(
+                      id INT NOT NULL AUTO_INCREMENT,
+                      product_id INT,
+                      price float,
+                      record_time int,
+                      PRIMARY KEY(id),
+                      FOREIGN KEY (product_id) REFERENCES products(id)
+                      );
+                      ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'price_records' already exists.
+2022-12-14 09:48:08,075:ERROR:42:Error: '
+                          CREATE TABLE nutritional_facts(
+                          id INT NOT NULL AUTO_INCREMENT,
+                          nutritional_facts_en VARCHAR(255),
+                          nutritional_facts_he VARCHAR(255),
+                          PRIMARY KEY(id)
+                          );
+                          ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_facts' already exists.
+2022-12-14 09:48:08,088:ERROR:42:Error: '
+                           CREATE TABLE nutritional_values(
+                           id INT NOT NULL AUTO_INCREMENT,
+                           product_id INT,
+                           item INT,
+                           barcode int,
+                           name VARCHAR(255),
+                           nutritional_facts INT,
+                           PRIMARY KEY(id),
+                           FOREIGN KEY (product_id) REFERENCES products(id)
+                           );
+                           ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_values' already exists.
+2022-12-14 12:22:37,983:ERROR:42:Error: 'CREATE DATABASE rami_levy;' (i.e. 0 out of 1 commands) was not executed due to the following:
+1007 (HY000): Can't create database 'rami_levy'; database exists.
+2022-12-14 12:22:37,996:ERROR:42:Error: '
+                 CREATE TABLE sections(
+                         id INT NOT NULL AUTO_INCREMENT, 
+                         name VARCHAR(255), 
+                         url VARCHAR(255), 
+                         PRIMARY KEY(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sections' already exists.
+2022-12-14 12:22:38,009:ERROR:42:Error: '
+                     CREATE TABLE sub_sections(
+                     id INT NOT NULL AUTO_INCREMENT,
+                     name VARCHAR(255),
+                     url VARCHAR(255),
+                     section_id INT,
+                     PRIMARY KEY(id),
+                     FOREIGN KEY (section_id) REFERENCES sections(id)
+                     );
+                     ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'sub_sections' already exists.
+2022-12-14 12:22:38,019:ERROR:42:Error: '
+                 CREATE TABLE products(
+                         id INT NOT NULL AUTO_INCREMENT,
+                         item INT,
+                         barcode INT,
+                         name VARCHAR(255),
+                         sub_section_id INT,
+                         PRIMARY KEY(id),
+                         FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id)
+                 );
+                 ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'products' already exists.
+2022-12-14 12:22:38,031:ERROR:42:Error: '
+                      CREATE TABLE price_records(
+                      id INT NOT NULL AUTO_INCREMENT,
+                      product_id INT,
+                      price float,
+                      record_time int,
+                      PRIMARY KEY(id),
+                      FOREIGN KEY (product_id) REFERENCES products(id)
+                      );
+                      ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'price_records' already exists.
+2022-12-14 12:22:38,043:ERROR:42:Error: '
+                          CREATE TABLE nutritional_facts(
+                          id INT NOT NULL AUTO_INCREMENT,
+                          nutritional_facts_en VARCHAR(255),
+                          nutritional_facts_he VARCHAR(255),
+                          PRIMARY KEY(id)
+                          );
+                          ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_facts' already exists.
+2022-12-14 12:22:38,055:ERROR:42:Error: '
+                           CREATE TABLE nutritional_values(
+                           id INT NOT NULL AUTO_INCREMENT,
+                           product_id INT,
+                           item INT,
+                           barcode int,
+                           name VARCHAR(255),
+                           nutritional_facts INT,
+                           PRIMARY KEY(id),
+                           FOREIGN KEY (product_id) REFERENCES products(id)
+                           );
+                           ' (i.e. 1 out of 2 commands) was not executed due to the following:
+1050 (42S01): Table 'nutritional_values' already exists.
+2022-12-14 12:35:19,325:ERROR:42:Error: '
+' (i.e. 0 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:35:19,328:ERROR:42:Error: 'S' (i.e. 1 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'S' at line 1.
+2022-12-14 12:35:19,329:ERROR:42:Error: 'E' (i.e. 2 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'E' at line 1.
+2022-12-14 12:35:19,330:ERROR:42:Error: 'L' (i.e. 3 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'L' at line 1.
+2022-12-14 12:35:19,330:ERROR:42:Error: 'E' (i.e. 4 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'E' at line 1.
+2022-12-14 12:35:19,331:ERROR:42:Error: 'C' (i.e. 5 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C' at line 1.
+2022-12-14 12:35:19,331:ERROR:42:Error: 'T' (i.e. 6 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'T' at line 1.
+2022-12-14 12:35:19,332:ERROR:42:Error: ' ' (i.e. 7 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:35:19,333:ERROR:42:Error: 'i' (i.e. 8 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'i' at line 1.
+2022-12-14 12:35:19,333:ERROR:42:Error: 'd' (i.e. 9 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd' at line 1.
+2022-12-14 12:35:19,334:ERROR:42:Error: ',' (i.e. 10 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',' at line 1.
+2022-12-14 12:35:19,334:ERROR:42:Error: ' ' (i.e. 11 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:35:19,335:ERROR:42:Error: 'i' (i.e. 12 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'i' at line 1.
+2022-12-14 12:35:19,335:ERROR:42:Error: 't' (i.e. 13 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't' at line 1.
+2022-12-14 12:35:19,336:ERROR:42:Error: 'e' (i.e. 14 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e' at line 1.
+2022-12-14 12:35:19,336:ERROR:42:Error: 'm' (i.e. 15 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm' at line 1.
+2022-12-14 12:35:19,338:ERROR:42:Error: '
+' (i.e. 16 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:35:19,338:ERROR:42:Error: 'F' (i.e. 17 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'F' at line 1.
+2022-12-14 12:35:19,339:ERROR:42:Error: 'R' (i.e. 18 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'R' at line 1.
+2022-12-14 12:35:19,339:ERROR:42:Error: 'O' (i.e. 19 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'O' at line 1.
+2022-12-14 12:35:19,340:ERROR:42:Error: 'M' (i.e. 20 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'M' at line 1.
+2022-12-14 12:35:19,340:ERROR:42:Error: ' ' (i.e. 21 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:35:19,341:ERROR:42:Error: 'p' (i.e. 22 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'p' at line 1.
+2022-12-14 12:35:19,341:ERROR:42:Error: 'r' (i.e. 23 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r' at line 1.
+2022-12-14 12:35:19,342:ERROR:42:Error: 'o' (i.e. 24 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'o' at line 1.
+2022-12-14 12:35:19,342:ERROR:42:Error: 'd' (i.e. 25 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd' at line 1.
+2022-12-14 12:35:19,343:ERROR:42:Error: 'u' (i.e. 26 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'u' at line 1.
+2022-12-14 12:35:19,343:ERROR:42:Error: 'c' (i.e. 27 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c' at line 1.
+2022-12-14 12:35:19,344:ERROR:42:Error: 't' (i.e. 28 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't' at line 1.
+2022-12-14 12:35:19,345:ERROR:42:Error: 's' (i.e. 29 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's' at line 1.
+2022-12-14 12:35:19,345:ERROR:42:Error: '
+' (i.e. 30 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:05,218:ERROR:44:Error: '
+' (i.e. 0 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:05,226:ERROR:44:Error: 'S' (i.e. 1 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'S' at line 1.
+2022-12-14 12:39:05,228:ERROR:44:Error: 'E' (i.e. 2 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'E' at line 1.
+2022-12-14 12:39:05,248:ERROR:44:Error: 'L' (i.e. 3 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'L' at line 1.
+2022-12-14 12:39:05,253:ERROR:44:Error: 'E' (i.e. 4 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'E' at line 1.
+2022-12-14 12:39:05,254:ERROR:44:Error: 'C' (i.e. 5 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C' at line 1.
+2022-12-14 12:39:05,256:ERROR:44:Error: 'T' (i.e. 6 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'T' at line 1.
+2022-12-14 12:39:05,257:ERROR:44:Error: ' ' (i.e. 7 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:05,258:ERROR:44:Error: 'i' (i.e. 8 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'i' at line 1.
+2022-12-14 12:39:05,260:ERROR:44:Error: 'd' (i.e. 9 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd' at line 1.
+2022-12-14 12:39:05,261:ERROR:44:Error: ',' (i.e. 10 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',' at line 1.
+2022-12-14 12:39:05,268:ERROR:44:Error: ' ' (i.e. 11 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:05,269:ERROR:44:Error: 'i' (i.e. 12 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'i' at line 1.
+2022-12-14 12:39:05,270:ERROR:44:Error: 't' (i.e. 13 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't' at line 1.
+2022-12-14 12:39:05,272:ERROR:44:Error: 'e' (i.e. 14 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e' at line 1.
+2022-12-14 12:39:05,275:ERROR:44:Error: 'm' (i.e. 15 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm' at line 1.
+2022-12-14 12:39:05,282:ERROR:44:Error: '
+' (i.e. 16 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:05,285:ERROR:44:Error: 'F' (i.e. 17 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'F' at line 1.
+2022-12-14 12:39:05,286:ERROR:44:Error: 'R' (i.e. 18 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'R' at line 1.
+2022-12-14 12:39:05,286:ERROR:44:Error: 'O' (i.e. 19 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'O' at line 1.
+2022-12-14 12:39:05,287:ERROR:44:Error: 'M' (i.e. 20 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'M' at line 1.
+2022-12-14 12:39:05,288:ERROR:44:Error: ' ' (i.e. 21 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:05,290:ERROR:44:Error: 'p' (i.e. 22 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'p' at line 1.
+2022-12-14 12:39:05,292:ERROR:44:Error: 'r' (i.e. 23 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r' at line 1.
+2022-12-14 12:39:05,293:ERROR:44:Error: 'o' (i.e. 24 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'o' at line 1.
+2022-12-14 12:39:05,295:ERROR:44:Error: 'd' (i.e. 25 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd' at line 1.
+2022-12-14 12:39:05,298:ERROR:44:Error: 'u' (i.e. 26 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'u' at line 1.
+2022-12-14 12:39:05,299:ERROR:44:Error: 'c' (i.e. 27 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c' at line 1.
+2022-12-14 12:39:05,301:ERROR:44:Error: 't' (i.e. 28 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't' at line 1.
+2022-12-14 12:39:05,302:ERROR:44:Error: 's' (i.e. 29 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's' at line 1.
+2022-12-14 12:39:05,303:ERROR:44:Error: '
+' (i.e. 30 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:29,159:ERROR:44:Error: '
+' (i.e. 0 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:29,165:ERROR:44:Error: 'S' (i.e. 1 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'S' at line 1.
+2022-12-14 12:39:29,166:ERROR:44:Error: 'E' (i.e. 2 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'E' at line 1.
+2022-12-14 12:39:29,167:ERROR:44:Error: 'L' (i.e. 3 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'L' at line 1.
+2022-12-14 12:39:29,168:ERROR:44:Error: 'E' (i.e. 4 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'E' at line 1.
+2022-12-14 12:39:29,169:ERROR:44:Error: 'C' (i.e. 5 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'C' at line 1.
+2022-12-14 12:39:29,170:ERROR:44:Error: 'T' (i.e. 6 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'T' at line 1.
+2022-12-14 12:39:29,171:ERROR:44:Error: ' ' (i.e. 7 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:29,172:ERROR:44:Error: 'i' (i.e. 8 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'i' at line 1.
+2022-12-14 12:39:29,173:ERROR:44:Error: 'd' (i.e. 9 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd' at line 1.
+2022-12-14 12:39:29,174:ERROR:44:Error: ',' (i.e. 10 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',' at line 1.
+2022-12-14 12:39:29,175:ERROR:44:Error: ' ' (i.e. 11 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:29,176:ERROR:44:Error: 'i' (i.e. 12 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'i' at line 1.
+2022-12-14 12:39:29,177:ERROR:44:Error: 't' (i.e. 13 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't' at line 1.
+2022-12-14 12:39:29,178:ERROR:44:Error: 'e' (i.e. 14 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e' at line 1.
+2022-12-14 12:39:29,179:ERROR:44:Error: 'm' (i.e. 15 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm' at line 1.
+2022-12-14 12:39:29,181:ERROR:44:Error: '
+' (i.e. 16 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:29,182:ERROR:44:Error: 'F' (i.e. 17 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'F' at line 1.
+2022-12-14 12:39:29,183:ERROR:44:Error: 'R' (i.e. 18 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'R' at line 1.
+2022-12-14 12:39:29,184:ERROR:44:Error: 'O' (i.e. 19 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'O' at line 1.
+2022-12-14 12:39:29,185:ERROR:44:Error: 'M' (i.e. 20 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'M' at line 1.
+2022-12-14 12:39:29,186:ERROR:44:Error: ' ' (i.e. 21 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:39:29,187:ERROR:44:Error: 'p' (i.e. 22 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'p' at line 1.
+2022-12-14 12:39:29,187:ERROR:44:Error: 'r' (i.e. 23 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'r' at line 1.
+2022-12-14 12:39:29,188:ERROR:44:Error: 'o' (i.e. 24 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'o' at line 1.
+2022-12-14 12:39:29,189:ERROR:44:Error: 'd' (i.e. 25 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd' at line 1.
+2022-12-14 12:39:29,190:ERROR:44:Error: 'u' (i.e. 26 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'u' at line 1.
+2022-12-14 12:39:29,191:ERROR:44:Error: 'c' (i.e. 27 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c' at line 1.
+2022-12-14 12:39:29,191:ERROR:44:Error: 't' (i.e. 28 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't' at line 1.
+2022-12-14 12:39:29,192:ERROR:44:Error: 's' (i.e. 29 out of 31 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's' at line 1.
+2022-12-14 12:39:29,193:ERROR:44:Error: '
+' (i.e. 30 out of 31 commands) was not executed due to the following:
+1065 (42000): Query was empty.
+2022-12-14 12:40:13,074:ERROR:44:Error: '
+SELECT id, item
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-14 12:42:44,648:ERROR:46:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x000002097E602CA0>;
+SELECT id, item
+FROM products
+' (i.e. 0 out of 1 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x000002097E602CA0>;' at line 1.
+2022-12-14 12:44:06,823:ERROR:46:Error: '['USE <mysql.connector.connection_cext.CMySQLConnection object at 0x000002707C8F2C70>;', '\nSELECT id, item\nFROM products\n']' (i.e. 0 out of 1 commands) was not executed due to the following:
+2055: Lost connection to MySQL server at 'localhost:3306', system error: Connection not available..
+2022-12-14 12:44:57,667:ERROR:46:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x00000244264C2CA0>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x00000244264C2CA0>' at line 1.
+2022-12-14 12:44:57,670:ERROR:46:Error: '
+SELECT id, item
+FROM products
+' (i.e. 1 out of 2 commands) was not executed due to the following:
+1046 (3D000): No database selected.
+2022-12-14 12:46:44,203:ERROR:46:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x0000027088A72CD0>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x0000027088A72CD0>' at line 1.
+2022-12-14 12:57:10,485:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x0000016B5A6FE3A0>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x0000016B5A6FE3A0>' at line 1.
+2022-12-14 12:57:25,450:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x0000028505DBD3A0>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x0000028505DBD3A0>' at line 1.
+2022-12-14 12:57:25,453:ERROR:50:Error: '
+INSERT INTO products ('item', 'barcode', 'name') VALUES (1, 756756745, 'milk')
+' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''item', 'barcode', 'name') VALUES (1, 756756745, 'milk')' at line 1.
+2022-12-14 12:57:25,458:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x0000028505DBD550>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x0000028505DBD550>' at line 1.
+2022-12-14 13:47:08,872:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x000001837798E3A0>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x000001837798E3A0>' at line 1.
+2022-12-14 13:47:08,910:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x000001837798E550>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x000001837798E550>' at line 1.
+2022-12-14 14:32:49,825:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x000001D92570C550>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x000001D92570C550>' at line 1.
+2022-12-14 14:32:55,310:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x000001D268CDDBB0>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x000001D268CDDBB0>' at line 1.
+2022-12-14 14:34:25,323:ERROR:50:Error: 'USE <mysql.connector.connection_cext.CMySQLConnection object at 0x00000281B4223880>;' (i.e. 0 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<mysql.connector.connection_cext.CMySQLConnection object at 0x00000281B4223880>' at line 1.
+2022-12-14 15:49:35,259:ERROR:50:Error: 'INSERT INTO price_records (product_id, price, record_time) VALUES (5, 2330, 2022-12-14 15:49:35);' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15:49:35)' at line 1.
+2022-12-14 16:34:05,728:ERROR:50:Error: 'INSERT INTO price_records (product_id, price, record_time) VALUES (5, 2330, 2022-12-14 16:34:05);' (i.e. 1 out of 2 commands) was not executed due to the following:
+1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '16:34:05)' at line 1.

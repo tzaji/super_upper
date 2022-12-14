@@ -88,22 +88,9 @@ def updating_db_tables(dict_list: list, db=DATABASE):
     for table_db in dict_list:
         for table_name, atr_dict in table_db.items():
             sql = f"INSERT INTO {table_name} ({', '.join(atr_dict.keys())}) VALUES ({', '.join(atr_dict.values())});"
-            execute_sql_commands(initialize_commands + [sql])
+            execute_sql_commands(initialize_commands + [sql], type="INSERT")
             logging.info(f"updating_db_tables: {sql} command was successfully sent to be executed.")
 
 
 # sys.stdout = restore_point
 # print('sys.stdout was successfully restored to console')
-
-# select_products_id_query = """
-# SELECT id, item
-# FROM products
-# """
-
-# insert_product_query = """
-# INSERT INTO products (item, barcode, name) VALUES (2, 346756745, 'eggs')
-# """
-
-# execute_sql_commands([select_products_id_query], type="SELECT")
-# execute_sql_commands([insert_product_query], type="INSERT")
-# execute_sql_commands([select_products_id_query], type="SELECT")

@@ -425,6 +425,8 @@ def scrape_update_price(dictionary, list_id_int, url_section, config_scrap_paths
     price_correction_func = config_scrap_paths['path']['item_scrap']['scrap']['section_page']['price'][
         'correction_func']
 
+    print(f'dictionary: {dictionary}')
+
     for item in range(items_to_run):
         # try:
         driver.find_element(By.ID, path_list[item])
@@ -434,11 +436,11 @@ def scrape_update_price(dictionary, list_id_int, url_section, config_scrap_paths
         print('item path_list', path_list[item])
         print('item list_id_int', list_id_int[item])
 
-        if list_id_int[item] in dictionary:
+        if int(list_id_int[item]) in dictionary:
 
-            id_prod_db = dictionary[list_id_int[item]]
+            id_prod_db = dictionary[int(list_id_int[item])]
             print(f'id_prod_db: {id_prod_db}')
-            print(f'dictionary: {dictionary}')
+
 
             item_price_path = str(
                 config_scrap_paths['path']['item_scrap']['scrap']['section_page']['price']['pre_num']) + str(
@@ -456,11 +458,9 @@ def scrape_update_price(dictionary, list_id_int, url_section, config_scrap_paths
 
             now = datetime.now()
             formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
-
-
-
-            price_record = [{'price_records': {'item_id': item, 'price': price, 'record_time': formatted_date}}]
+            price_record = [{'price_records': {'product_id': str(id_prod_db), 'price': str(price), 'record_time': str(formatted_date)}}]
             print('>>>> price_record', price_record)
+            database_functions.updating_db_tables(price_record)
 
         # Assuming you have a cursor named cursor you want to execute this query on:
         # cursor.execute('insert into table(id, date_created) values(%s, %s)', (id, formatted_date))
