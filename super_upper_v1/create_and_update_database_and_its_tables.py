@@ -27,20 +27,29 @@ DATABASE = "rami_levy"
 logging.basicConfig(filename=LOGGING_FILE_NAME, level=LOGGING_LEVEL, format=LOGGING_FORMAT)
 
 
-def execute_sql_commands(commands: list, hst=MYSQL_HOST, usr=MYSQL_USER, pswrd=MYSQL_PASSWORD):
+def execute_sql_commands(commands: list, type, hst=MYSQL_HOST, usr=MYSQL_USER, pswrd=MYSQL_PASSWORD):
     """
     this function receives sql commands (i.e. strings) and executes them one by one.
     """
-    mydb = mysql.connector.connect(host=hst, user=usr, password=pswrd)
+    mydb = mysql.connector.connect(host=hst, user=usr, password=pswrd, database=DATABASE)
+    use_command = [f"USE {DATABASE};"]
     total_commands = len(commands)
     with mydb.cursor() as cursor:
-        for i in range(total_commands):
+        cursor.execute(use_command[0])
+        for i in range(0, total_commands):
             try:
-                cursor.execute(commands[i])
+                if type == "SELECT":
+                    cursor.execute(commands[i])
+                    result = cursor.fetchall()
+                    return result
+                elif type == "INSERT":
+                    cursor.execute(commands[i])
+                    mydb.commit()
                 logging.info(f"'{commands[i]}' (i.e. {i} out of {total_commands} commands) was successfully executed.")
             except Exception as e:
                 logging.error(f"Error: '{commands[i]}' (i.e. {i} out of {total_commands} commands) was not "
                               f"executed due to the following:\n{e}.")
+
 
 
 def sql_commands_to_create_database(db_tables: list, db=DATABASE):
@@ -86,83 +95,15 @@ def updating_db_tables(dict_list: list, db=DATABASE):
 # sys.stdout = restore_point
 # print('sys.stdout was successfully restored to console')
 
-# sections_table = """
-#                  CREATE TABLE sections(
-#                          id INT NOT NULL AUTO_INCREMENT,
-#                          name VARCHAR(255),
-#                          url VARCHAR(255),
-#                          PRIMARY KEY(id)
-#                  );
-#                  """
-#
-# sub_sections_table = """
-#                      CREATE TABLE sub_sections(
-#                      id INT NOT NULL AUTO_INCREMENT,
-#                      name VARCHAR(255),
-#                      url VARCHAR(255),
-#                      section_id INT,
-#                      PRIMARY KEY(id),
-#                      FOREIGN KEY (section_id) REFERENCES sections(id)
-#                      );
-#                      """
-#
-# products_table = """
-#                  CREATE TABLE products(
-#                          id INT NOT NULL AUTO_INCREMENT,
-#                          item INT,
-#                          barcode INT,
-#                          name VARCHAR(255),
-#                          sub_section_id INT,
-#                          PRIMARY KEY(id),
-#                          FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id)
-#                  );
-#                  """
-#
-# price_records_table = """
-#                       CREATE TABLE price_records(
-#                       id INT NOT NULL AUTO_INCREMENT,
-#                       product_id INT,
-#                       price float,
-#                       record_time int,
-#                       PRIMARY KEY(id),
-#                       FOREIGN KEY (product_id) REFERENCES products(id)
-#                       );
-#                       """
-#
-# nutritional_values_table = """
-#                            CREATE TABLE nutritional_values(
-#                            id INT NOT NULL AUTO_INCREMENT,
-#                            product_id INT,
-#                            item INT,
-#                            barcode int,
-#                            name VARCHAR(255),
-#                            nutritional_facts INT,
-#                            PRIMARY KEY(id),
-#                            FOREIGN KEY (product_id) REFERENCES products(id)
-#                            );
-#                            """
-#
-# nutritional_facts_table = """
-#                           CREATE TABLE nutritional_facts(
-#                           id INT NOT NULL AUTO_INCREMENT,
-#                           nutritional_facts_en VARCHAR(255),
-#                           nutritional_facts_he VARCHAR(255),
-#                           PRIMARY KEY(id)
-#                           );
-#                           """
-#
-#
-#
-# # tables_queries = [sections_table,
-# #                   sub_sections_table,
-# #                   products_table,
-# #                   price_records_table,
-# #                   nutritional_facts_table,
-# #                   nutritional_values_table
-# #                   ]
-#
-# foreign_keys_queries = [foreign_keys_alter_nutritional_values_table,
-#                         foreign_keys_alter_nutritional_facts_table
-#                         ]
+# select_products_id_query = """
+# SELECT id, item
+# FROM products
+# """
 
-# sql_commands_to_create_database(tables_queries)
+# insert_product_query = """
+# INSERT INTO products (item, barcode, name) VALUES (2, 346756745, 'eggs')
+# """
+
+# execute_sql_commands([select_products_id_query], type="SELECT")
+# execute_sql_commands([insert_product_query], type="INSERT")
+# execute_sql_commands([select_products_id_query], type="SELECT")

@@ -6,18 +6,7 @@ sections_table = """
                          PRIMARY KEY(id)
                  );
                  """
-       
-sub_sections_table = """
-                     CREATE TABLE sub_sections(
-                     id INT NOT NULL AUTO_INCREMENT,
-                     name VARCHAR(255),
-                     url VARCHAR(255),
-                     section_id INT,
-                     PRIMARY KEY(id),
-                     FOREIGN KEY (section_id) REFERENCES sections(id)
-                     );
-                     """
-       
+
 products_table = """
                  CREATE TABLE products(
                          id INT NOT NULL AUTO_INCREMENT,
@@ -26,7 +15,6 @@ products_table = """
                          name VARCHAR(255),
                          sub_section_id INT,
                          PRIMARY KEY(id),
-                         FOREIGN KEY (sub_section_id) REFERENCES sub_sections(id)
                  );
                  """
        
@@ -74,7 +62,6 @@ foreign_keys_alter_nutritional_facts_table = """
                                              """
 
 tables_queries = [sections_table,
-                  sub_sections_table,
                   products_table,
                   price_records_table,
                   nutritional_facts_table,
@@ -84,3 +71,8 @@ tables_queries = [sections_table,
 foreign_keys_queries = [foreign_keys_alter_nutritional_values_table,
                         foreign_keys_alter_nutritional_facts_table
                         ]
+
+select_products_items_query = """
+SELECT item, id
+FROM products
+"""

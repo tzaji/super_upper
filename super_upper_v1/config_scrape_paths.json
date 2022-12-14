@@ -1,0 +1,54 @@
+{"path": {
+   "item_scrap": {
+     "system_parameters": {
+       "default_scrap_speed": "3",
+       "num_nutrition_facts_to_lookfor": "15",
+       "url_item_start": "https://www.rami-levy.co.il/he/online/market/",
+       "url_item_middle": "?item="
+     },
+     "clicks": {
+       "click_open_nutrition_values": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[2]/div[1]/div[2]/div/h2",
+       "nutrition_facts_horizontal_scroll": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[2]/div[1]/div[2]/div[2]",
+       "barcode_out": "//*[@id='close-popup']"
+     },
+     "scrap": {
+
+       "section_page": {
+         "price": {
+           "pre_num": "//*[@id='",
+           "post_num": "']/div[4]/div/div/span/span",
+           "correction_func": "fix_item_price"
+         }
+       },
+
+
+       "item": {
+         "barcode": {
+           "path": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/div",
+           "correction_func": "no_correction_function_needed"
+         },
+         "name": {
+           "path": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[1]/div[2]/div[1]/h3",
+           "correction_func": "no_correction_function_needed"
+         }
+       },
+       "nutrition": {
+         "nutri_val": {
+           "pre_num": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[2]/div[1]/div[2]/div[2]/div[",
+           "post_num": "]/div/div[1]",
+           "correction_func": "no_correction_function_needed"
+         },
+         "nutri_unit": {
+           "pre_num": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[2]/div[1]/div[2]/div[2]/div[",
+           "post_num": "]/div/small",
+           "correction_func": "no_correction_function_needed"
+         },
+         "nutri_fact": {
+           "pre_num": "//*[@id='main-product-modal___BV_modal_body_']/div/div[2]/div/div/div/div[2]/div[1]/div[2]/div[2]/div[",
+           "post_num": "]/div/div[2]",
+           "correction_func": "no_correction_function_needed"
+         }
+       }
+     }
+   }}}
+

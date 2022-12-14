@@ -1,0 +1,6 @@
+{
+   "URL":"https://www.imdb.com/chart/top?ref_=nv_mv_250",
+   "batches":10,
+   "custom_header": {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"},
+   "url_fix" : "https://www.imdb.com"
+}
