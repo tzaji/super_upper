@@ -10,15 +10,24 @@ import create_and_update_database_and_its_tables as database_functions
 JSON_FILE_ITEMS_MASTER = 'items_master.json'
 JSON_FILE_SECTIONS_MASTER = 'sections_master.json'
 JSON_FILE_NAME_PATH = 'config_scrape_paths.json'
-IF_SEARCH_NEW_PRODUCT = False
-IF_UPDATE_PRICES = True
+IF_SEARCH_NEW_PRODUCT = True
+IF_UPDATE_PRICES = False
 IF_CREATE_DATABASE = False
+IF_ANSWER_QUERY = False
+
+
 
 # Test: limit of item per group to scrap. For unlimited: -1.
-test_limit_item_per_group_ini = 10
+test_limit_item_per_group_ini = -1
 
 # Scraping speed: 3 is the normal speed. We recommend to scrap between 1 and 5. Please enter your preference.
 scrap_speed = 3
+
+def db_query(text, limit_num):
+    text = f"SELECT * FROM products JOIN price_records ON products.id = price_records.product_id LIMIT {limit_num};"
+    query_answer = database_functions.execute_sql_commands([text], type="SELECT")
+    for row in query_answer:
+        print(row)
 
 
 def convert_tuples_to_dictionary(tuples=()):
@@ -210,7 +219,7 @@ def scrape_rami(list_id_int, url_section, section_name, test_limit_item_per_grou
         items_to_run = test_limit_item_per_group
 
     for i in range(items_to_run):
-        try:
+        # try:
             driver.find_element(By.ID, path_list[i])
             driver.find_element(By.ID, path_list[i]).click()
             time.sleep(3 * 3 / scrap_speed)
@@ -236,10 +245,10 @@ def scrape_rami(list_id_int, url_section, section_name, test_limit_item_per_grou
 
             time.sleep(3 * 5 / speed)
 
-        except Exception:
-            pass
+        # except Exception:
+        #     pass
 
-    print(f'>> {section_name} section printing finished \n')
+    print(f'>> {section_name} section finished \n')
     return items_in_section_dict
 
 
@@ -297,11 +306,14 @@ def scrape_items_data(list_id_int, master_items_dict, url_section, section_name,
     for i in range(items_to_run):
         try:
             driver.find_element(By.ID, path_list[i])
+            print('path_list[i]', path_list[i])
             driver.find_element(By.ID, path_list[i]).click()
 
             time.sleep(3 * 3 / scrap_speed)
 
             temp_product = {}
+            temp_product['item'] = list_id_int[i]
+
             temp_product_nutrition = {}
             print('item', path_list[i])
             print(f'scrap item {path_list[i]} start')
@@ -314,45 +326,62 @@ def scrape_items_data(list_id_int, master_items_dict, url_section, section_name,
                 value = str(data_value.text)
                 if data == 'barcode':
                     value = value[6:]
+                if data == 'name':
+                    value = str("'" + value + "'")
                 temp_product[data] = value
-                temp_product_nutrition[data] = value
+                # temp_product_nutrition[data] = value
 
-            temp_product['section'] = section_id
+            temp_product['section_id'] = section_id
             print('temp_product print after uni data', temp_product)
-            print('temp_nutrition print after uni data', temp_nutrition)
 
-            try:
-                driver.find_element(By.XPATH, config_scrap_paths["path"]["item_scrap"]["clicks"][
-                    "click_open_nutrition_values"]).click()
-                time.sleep(3 * 3 / scrap_speed)
-                nutrition_facts_counter = 1
-                temp_nutrition = {}
+            product_insert_sql = [{'products': temp_product}]
+            # insert_sql_product
+            database_functions.updating_db_tables(product_insert_sql)
+            # return new id product db
+            product_id_db_return = f"select id from products where item = {list_id_int[i]} order by id desc limit 1;"
 
-                # check nutrition facts
-                while nutrition_facts_counter < int(config_scrap_paths["path"]["item_scrap"]["system_parameters"][
-                                                        "num_nutrition_facts_to_lookfor"]):
-                    temp_nutrition[nutrition_facts_counter] = {}
-                    for nutrition_data in config_scrap_paths["path"]["item_scrap"]["scrap"]["nutrition"]:
+            product_id = database_functions.execute_sql_commands([product_id_db_return], type="SELECT")
 
-                        # check new nutrition fact
-                        try:
-                            data_value = driver.find_element(By.XPATH,
-                                                             f"{config_scrap_paths['path']['item_scrap']['scrap']['nutrition'][nutrition_data]['pre_num']}{str(nutrition_facts_counter)}{config_scrap_paths['path']['item_scrap']['scrap']['nutrition'][nutrition_data]['post_num']}")
-                            temp_nutrition[nutrition_facts_counter][nutrition_data] = str(data_value.text)
-                        except:
-                            pass
+            if len(product_id) > 0:
+                print('product_id', product_id[0][0])
+                temp_product_nutrition['product_id'] = product_id[0][0]
 
-                    temp_product_nutrition['nutrition'] = temp_nutrition
-                    print('temp print nutrition collect', temp_product_nutrition)
+                # print('temp_nutrition print after uni data', nutrition_data)
 
-                    if temp_nutrition[nutrition_facts_counter] == {}:
-                        del temp_nutrition[nutrition_facts_counter]
-                    nutrition_facts_counter += 1
+                try:
+                    driver.find_element(By.XPATH, config_scrap_paths["path"]["item_scrap"]["clicks"]["click_open_nutrition_values"]).click()
+                    time.sleep(3 * 3 / scrap_speed)
+                    nutrition_facts_counter = 1
+                    temp_nutrition = {}
 
-                else:
+                    # check nutrition facts
+                    while nutrition_facts_counter < int(config_scrap_paths["path"]["item_scrap"]["system_parameters"][
+                                                            "num_nutrition_facts_to_lookfor"]):
+                        temp_nutrition[nutrition_facts_counter] = {}
+                        for nutrition_data in config_scrap_paths["path"]["item_scrap"]["scrap"]["nutrition"]:
+
+                            # check new nutrition fact
+                            try:
+                                data_value = driver.find_element(By.XPATH,
+                                                                 f"{config_scrap_paths['path']['item_scrap']['scrap']['nutrition'][nutrition_data]['pre_num']}{str(nutrition_facts_counter)}{config_scrap_paths['path']['item_scrap']['scrap']['nutrition'][nutrition_data]['post_num']}")
+                                temp_nutrition[nutrition_facts_counter][nutrition_data] = str(data_value.text)
+                            except:
+                                pass
+
+                            print('temp_nutrition', temp_nutrition)
+                            # temp_product_nutrition['nutrition'] = temp_nutrition
+                            # print('temp print nutrition collect', temp_product_nutrition)
+
+                            if temp_nutrition[nutrition_facts_counter] == {}:
+                                del temp_nutrition[nutrition_facts_counter]
+                            nutrition_facts_counter += 1
+
+                    else:
+                        pass
+                except:
                     pass
-            except:
-                pass
+
+
 
             barcode_out = """//*[@id="close-popup"]"""
             driver.find_element(By.XPATH, barcode_out).click()
@@ -365,8 +394,10 @@ def scrape_items_data(list_id_int, master_items_dict, url_section, section_name,
 
             # items_data_dict[path_list[i][5:]] = temp
             # print('dict after add item', items_data_dict)
+
         except:
-            print(f'{path_list[i]} not scraped')
+             print(f'{path_list[i]} not scraped')
+
     # print('return dict of items', items_data_dict)
     print(f'>> {section_name} section printing finished \n')
     # add_general_items_data = {}
@@ -428,45 +459,45 @@ def scrape_update_price(dictionary, list_id_int, url_section, config_scrap_paths
     print(f'dictionary: {dictionary}')
 
     for item in range(items_to_run):
-        # try:
-        driver.find_element(By.ID, path_list[item])
+        try:
+            driver.find_element(By.ID, path_list[item])
 
 
-        print('preview to check check price')
-        print('item path_list', path_list[item])
-        print('item list_id_int', list_id_int[item])
+            print('preview to check check price')
+            print('item path_list', path_list[item])
+            print('item list_id_int', list_id_int[item])
 
-        if int(list_id_int[item]) in dictionary:
+            if int(list_id_int[item]) in dictionary:
 
-            id_prod_db = dictionary[int(list_id_int[item])]
-            print(f'id_prod_db: {id_prod_db}')
+                id_prod_db = dictionary[int(list_id_int[item])]
+                print(f'id_prod_db: {id_prod_db}')
 
 
-            item_price_path = str(
-                config_scrap_paths['path']['item_scrap']['scrap']['section_page']['price']['pre_num']) + str(
-                path_list[item]) + str(
-                config_scrap_paths['path']['item_scrap']['scrap']['section_page']['price']["post_num"])
-            print('item_price_path', item_price_path)
-            # check the price
-            data_price = driver.find_element(By.XPATH, item_price_path)
-            price_string = data_price.text
-            price = int(price_string[-4:-2]) + int(price_string[:-5]) * 100
-            print('price:', price, type(price))
+                item_price_path = str(
+                    config_scrap_paths['path']['item_scrap']['scrap']['section_page']['price']['pre_num']) + str(
+                    path_list[item]) + str(
+                    config_scrap_paths['path']['item_scrap']['scrap']['section_page']['price']["post_num"])
+                print('item_price_path', item_price_path)
+                # check the price
+                data_price = driver.find_element(By.XPATH, item_price_path)
+                price_string = data_price.text
+                price = int(price_string[-4:-2]) + int(price_string[:-5]) * 100
+                print('price:', price, type(price))
 
-            # insert price record
-            # id = 1
+                # insert price record
+                # id = 1
 
-            now = datetime.now()
-            formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
-            price_record = [{'price_records': {'product_id': str(id_prod_db), 'price': str(price), 'record_time': str(formatted_date)}}]
-            print('>>>> price_record', price_record)
-            database_functions.updating_db_tables(price_record)
+                now = datetime.now()
+                formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
+                price_record = [{'price_records': {'product_id': str(id_prod_db), 'price': str(price), 'record_time': str("'" + formatted_date + "'")}}]
+                print('>>>> price_record', price_record)
+                database_functions.updating_db_tables(price_record)
 
-        # Assuming you have a cursor named cursor you want to execute this query on:
-        # cursor.execute('insert into table(id, date_created) values(%s, %s)', (id, formatted_date))
+            # Assuming you have a cursor named cursor you want to execute this query on:
+            # cursor.execute('insert into table(id, date_created) values(%s, %s)', (id, formatted_date))
 
-    # except Exception:
-    #       print(f"{item} is not checking price")
+        except Exception:
+            print(f"{item} is not checking price")
 
     # print(f'>> {section_name} section printing finished \n')
     # return items_in_section_dict
@@ -479,6 +510,11 @@ def main():
     # Initialize database with tables
     if IF_CREATE_DATABASE:
         database_functions.sql_commands_to_create_database(database_config.tables_queries)
+
+
+    if IF_ANSWER_QUERY:
+        db_query("0", "15")
+
 
     # SELECT list of tuples(item, id) of products
     product_tuples = database_functions.execute_sql_commands([database_config.select_products_items_query], type="SELECT")
@@ -499,46 +535,48 @@ def main():
     config_scrap_paths = import_dict_from_json(JSON_FILE_NAME_PATH)
     print('config_scrap_paths imported from json', type(config_scrap_paths), config_scrap_paths)
 
-    items_data = {}
+    if IF_SEARCH_NEW_PRODUCT or IF_UPDATE_PRICES:
 
-    for section_id in master_section_dict["sections"]:
-        print(master_section_dict["sections"])
-        print('value ID', type(section_id), section_id)  # key
-        print('master_section_dict["sections"] - URL', type(master_section_dict["sections"]),
-              master_section_dict["sections"][section_id])  # ["name"]
+        items_data = {}
 
-        list_id_str = search_id(master_section_dict["sections"][section_id]['url'],
-                                master_section_dict["sections"][section_id]['name'])
+        for section_id in master_section_dict["sections"]:
+            print(master_section_dict["sections"])
+            print('value ID', type(section_id), section_id)  # key
+            print('master_section_dict["sections"] - URL', type(master_section_dict["sections"]),
+                  master_section_dict["sections"][section_id])  # ["name"]
 
-        print(len(list_id_str), list_id_str)
-        list_id_int = clean_str_in_list(list_id_str)
-        print('master_items_dict before build', len(master_items_dict), master_items_dict)
-        print('list_id_int before enter to scrap section page', list_id_int)
+            list_id_str = search_id(master_section_dict["sections"][section_id]['url'],
+                                    master_section_dict["sections"][section_id]['name'])
 
-        if IF_SEARCH_NEW_PRODUCT:
-            scrape_items_data(list_id_int, master_items_dict, master_section_dict["sections"][section_id]['url'],
-                              master_section_dict["sections"][section_id]['name'], section_id, config_scrap_paths,
-                              test_limit_item_per_group=test_limit_item_per_group_ini,
-                              scrolling_times=10, sleeping_time=5, speed=3)
+            print(len(list_id_str), list_id_str)
+            list_id_int = clean_str_in_list(list_id_str)
+            print('master_items_dict before build', len(master_items_dict), master_items_dict)
+            print('list_id_int before enter to scrap section page', list_id_int)
 
-            items_data['items'] = scrape_items_data
-            print(items_data)
+            if IF_SEARCH_NEW_PRODUCT:
+                scrape_items_data(list_id_int, master_items_dict, master_section_dict["sections"][section_id]['url'],
+                                  master_section_dict["sections"][section_id]['name'], section_id, config_scrap_paths,
+                                  test_limit_item_per_group=test_limit_item_per_group_ini,
+                                  scrolling_times=10, sleeping_time=5, speed=3)
 
-        if IF_UPDATE_PRICES:
-            items_data = scrape_update_price(product_dictionary, list_id_int, master_section_dict["sections"][section_id]['url'],
-                                             config_scrap_paths, master_section_dict["sections"][section_id]['name'],
-                                             test_limit_item_per_group=test_limit_item_per_group_ini,
-                                             scrolling_times=10, sleeping_time=5, speed=3)
+                items_data['items'] = scrape_items_data
+                print(items_data)
 
-        master_items_dict = build_item_dict(master_items_dict, list_id_int, section_id)
-        print('master_items_dict after build', len(master_items_dict), master_items_dict)
+            if IF_UPDATE_PRICES:
+                items_data = scrape_update_price(product_dictionary, list_id_int, master_section_dict["sections"][section_id]['url'],
+                                                 config_scrap_paths, master_section_dict["sections"][section_id]['name'],
+                                                 test_limit_item_per_group=test_limit_item_per_group_ini,
+                                                 scrolling_times=10, sleeping_time=5, speed=3)
 
-    export_dict_to_json(master_items_dict, JSON_FILE_ITEMS_MASTER)
-    export_dict_to_json(items_data, 'items_first_insert.json')
+            master_items_dict = build_item_dict(master_items_dict, list_id_int, section_id)
+            print('master_items_dict after build', len(master_items_dict), master_items_dict)
 
-    print(config_scrap_paths)
-    print(master_items_dict)
-    print(master_section_dict)
+        export_dict_to_json(master_items_dict, JSON_FILE_ITEMS_MASTER)
+        export_dict_to_json(items_data, 'items_first_insert.json')
+
+        print(config_scrap_paths)
+        print(master_items_dict)
+        print(master_section_dict)
 
     # for item in master_items_dict['items']:
     #     print(build_item_url(item, config_scrap_paths, master_section_dict, master_items_dict))

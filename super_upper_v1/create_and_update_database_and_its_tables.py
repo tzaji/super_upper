@@ -13,7 +13,7 @@ SYS_STDOUT_FILE_NAME = "db_stdout.log"
 #  MySQL connection setup variables
 MYSQL_HOST = "localhost"
 MYSQL_USER = "root"
-MYSQL_PASSWORD = "root"
+MYSQL_PASSWORD = "Urquiza1040"
 
 #  default database name
 DATABASE = "rami_levy"
